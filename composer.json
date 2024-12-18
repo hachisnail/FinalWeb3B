@@ -1,0 +1,8 @@
+{
+    "name": "3b/meatshop",
+    "description": "project of BSIS 3B",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {}
+}
