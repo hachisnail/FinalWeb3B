@@ -21,7 +21,7 @@ iconClose.addEventListener('click', ()=> {wrapper.classList.remove('active-popup
 });
 
 function gotohome() {
-    window.location.href = "Home.html";
+    window.location.href = "./Home.html";
 }
 
 const aboutUsBtn = document.getElementById('aboutUsBtn');

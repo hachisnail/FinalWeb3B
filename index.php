@@ -13,9 +13,10 @@
     <?php
     // Database connection
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "admin";
+    $username = "u143688490_admin";
+    $password = "Fujwiara000!";
+    $dbname = "u143688490_meatshop
+";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -212,7 +213,7 @@
     </div>
 
 
-    <script src="login.js"></script>
+    <script src="./login.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 

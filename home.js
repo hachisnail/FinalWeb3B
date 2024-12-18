@@ -1,6 +1,6 @@
 function logout() {
     // Redirect to login page
-    window.location.href = 'index.php';
+    window.location.href = './index.php';
 }
 
 
