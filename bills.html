@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods - Grocery Store</title>
+    <link rel="stylesheet" href="bills.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Secure Payment Options</h1>
+        <p>Select your preferred payment method to complete your purchase.</p>
+    </header>
+
+    <!-- Payment Method Section -->
+    <section class="payment-container">
+        <form id="paymentForm" class="payment-form">
+            <!-- Card Option -->
+            <div class="payment-card">
+                <input type="radio" id="credit-card" name="payment" value="Credit/Debit Card" checked>
+                <label for="credit-card" class="card">
+                    <div class="icon">
+                        <img src="image/card.png" alt="Credit/Debit Card">
+                    </div>
+                    <div class="details">
+                        <h3>Credit/Debit Card</h3>
+                        <p>Pay securely with your Visa, MasterCard, or other credit cards.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- PayPal Option -->
+            <div class="payment-card">
+                <input type="radio" id="paypal" name="payment" value="PayPal">
+                <label for="paypal" class="card">
+                    <div class="icon">
+                        <img src="image/paypal.png" alt="PayPal">
+                    </div>
+                    <div class="details">
+                        <h3>PayPal</h3>
+                        <p>Quick and secure payment using your PayPal account.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- COD Option -->
+            <div class="payment-card">
+                <input type="radio" id="cod" name="payment" value="Cash on Delivery">
+                <label for="cod" class="card">
+                    <div class="icon">
+                        <img src="image/cash.png" alt="Cash on Delivery">
+                    </div>
+                    <div class="details">
+                        <h3>Cash on Delivery</h3>
+                        <p>Pay with cash when your order is delivered to your doorstep.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" class="submit-btn" id="proceedButton">Proceed to Payment</button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message" style="display: none;">
+            <p>🎉 Payment successfully processed! Thank you for your purchase. 🎉</p>
+        </div>
+    </section>
+
+
+    
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('proceedButton').addEventListener('click', function() {
+            // Get selected payment method
+            const selectedPayment = document.querySelector('input[name="payment"]:checked').value;
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            successMessage.innerHTML = `<p>🎉 Payment successfully processed using <strong>${selectedPayment}</strong>! Thank you for your purchase. 🎉</p>`;
+            
+            document.getElementById('paymentForm').reset();
+    
+            // Redirect to main page after 3 seconds (adjust as needed)
+            setTimeout(function() {
+                window.location.href = 'Home.html'; 
+            }, 3000); // 3000 milliseconds = 3 seconds
+        });
+    </script>
+    
+</body>
+</html>
